@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SONORE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/abcjs@6.2.3/dist/abcjs-basic-min.js" defer></script>
+    <meta name="google" content="notranslate">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="encabezado">REPERTORIO SONORE BOLIVIA</h1>
+    </header>
+
+    <nav class="nav">
+        <ul> 
+            <li><a href="index.html" class="botonI">
+                <i class="fa-solid fa-house"></i>
+            </a></li>
+            <li><a href="Chuntunquis.html">Chuntunquis</a></li>
+            <li><a href="Cuecas.html">Cuecas</a></li>
+            <li><a href="Huayños.html">Huayños</a></li>
+            <li><a href="Tinkus.html">Tinkus</a></li>
+            <li><a href="Morenadas.html">Morenadas</a></li>
+            <li><a href="Chacareras.html">Chacareras</a></li>
+        </ul>
+    </nav>
+
+    <section class="titulo">
+        <div> 
+            <h2 id="titulo-cancion">Seleccione una canción</h2>
+        </div>
+    </section>
+
+    <div class="seleccion-cancion" style="text-align: center; margin-bottom: 20px;">
+        <button onclick="seleccionarCancion('bermejenita')"></button>
+        <button onclick="seleccionarCancion('moto_mendez')">Moto Méndez</button>
+        </div>
+
+    <div class="tonalidad-botones">
+        <button onclick="cambiarTonalidad('L')">(Letra y Acordes)</button>
+        <button onclick="cambiarTonalidad('C')">(CCCC)</button>
+        <button onclick="cambiarTonalidad('F')">F / Dm (Quena)</button>
+        <button onclick="cambiarTonalidad('D')">D / Bm (Saxo)</button>
+    </div>
+
+    <div class="content-container">
+        <div id="partitura-container"></div>
+        <div id="letra-container" style="display:none; text-align: left; padding: 20px;"></div>
+    </div>
+
+    <footer>Todos los derechos reservados. Douglas Suarez Zubieta</footer>
+
+<script>
+/* ////// Base de Datos de Canciones ////// */
+const repertorio = {
+    'bermejenita': {
+        titulo: 'Bermejeñita (Cueca)',
+        letra: `<b>(Primera)</b>
+    Dm          Bb
+Del bello jardín chapaco
+          C           F  
+vengo cantando coplas de amor
+    C               F
+//a la tierra del lapacho
+   A7             Dm
+traigo todito tu corazón//`,
+        cccc: `<b>(Primera)</b>\nDel bello jardín chapaco... (Formato CCCC)`,
+        abc_D: `X:1\nT:Bermejeñita (D)\nM:3/4\nL:1/8\nK:D\n|:D2 F2 A2 | d4 f2 :|`,
+        abc_F: `X:1\nT:Bermejeñita (F)\nM:3/4\nL:1/8\nK:F\n|:F2 A2 c2 | f4 a2 :|`
+    },
+    'moto_mendez': {
+        titulo: 'El Moto Méndez (Cueca)',
+        letra: `<b>(Primera)</b>
+    G           D7
+Soy del pago del mozo
+               G
+donde el sol calienta más
+    D7             G
+//soy de la tierra del vino
+    B7             Em
+y del rico singaní//`,
+        cccc: `<b>(Primera)</b>\nSoy del pago del mozo... (Formato CCCC)`,
+        abc_D: `X:1\nT:Moto Mendez (D)\nM:3/4\nL:1/8\nK:D\n|:A,2 D2 F2 | A4 d2 :|`,
+        abc_F: `X:1\nT:Moto Mendez (F)\nM:3/4\nL:1/8\nK:F\n|:C2 F2 A2 | c4 f2 :|`
+    }
+};
+
+// Variable de control para saber qué canción está activa
+let cancionActiva = 'bermejenita';
+
+/* Función para elegir qué canción cargar */
+function seleccionarCancion(id) {
+    cancionActiva = id;
+    document.getElementById('titulo-cancion').innerText = repertorio[id].titulo;
+    // Al cambiar de canción, mostramos por defecto Letra y Acordes
+    cambiarTonalidad('L');
+}
+
+/* Función para cambiar lo que se ve (Letra, CCCC o Partituras) */
+function cambiarTonalidad(opcion) {
+    const partituraContainer = document.getElementById('partitura-container');
+    const letraContainer = document.getElementById('letra-container');
+    const cancion = repertorio[cancionActiva];
+
+    if (opcion === 'L' || opcion === 'C') {
+        // Mostrar texto (Letra o CCCC)
+        partituraContainer.style.display = 'none';
+        letraContainer.style.display = 'block';
+        
+        const texto = (opcion === 'L') ? cancion.letra : cancion.cccc;
+        letraContainer.innerHTML = `<pre style="font-family: inherit;">${texto}</pre>`;
+    } else {
+        // Mostrar Partitura (ABCJS)
+        letraContainer.style.display = 'none';
+        partituraContainer.style.display = 'block';
+        partituraContainer.innerHTML = ''; 
+
+        // Seleccionamos el código ABC según el botón (D o F)
+        const abc = (opcion === 'D') ? cancion.abc_D : cancion.abc_F;
+
+        if (typeof ABCJS !== 'undefined') {
+            try {
+                ABCJS.renderAbc(partituraContainer, abc, {
+                    responsive: 'resize',
+                    scale: 1.2
+                });
+            } catch (e) {
+                console.error("Error en ABCJS:", e);
+            }
+        }
+    }
+}
+
+/* Inicialización al cargar la página */
+document.addEventListener('DOMContentLoaded', function() {
+    seleccionarCancion('bermejenita'); 
+});
+</script>
+
+</body>
+</html>

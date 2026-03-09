@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SONORE - Repertorio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/abcjs@6.2.3/dist/abcjs-basic-min.js" defer></script>
+    <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="encabezado">REPERTORIO SONORE BOLIVIA</h1>
+    </header>
+
+    <nav class="nav">
+        <ul> 
+            <li><a href="index.html" class="botonI"><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="Chuntunquis.html">Chuntunquis</a></li>
+            <li><a href="Cuecas.html">Cuecas</a></li>
+            <li><a href="Huayños.html">Huayños</a></li>
+            <li><a href="Tinkus.html">Tinkus</a></li>
+            <li><a href="Morenadas.html">Morenadas</a></li>
+        </ul>
+    </nav>
+
+    <section class="titulo">
+        <h2 id="titulo-cancion">Seleccione una canción</h2>
+    </section>
+
+    <div class="seleccion-cancion">
+        <button onclick="seleccionarCancion('A')">A mi valle Bermejo</button>
+        <button onclick="seleccionarCancion('B')">Anarracherita</button>
+        </div>
+
+    <div class="content-container">
+        <div id="partitura-container"></div>
+        
+        <div id="letra-container"></div>
+    </div>
+
+    <footer>Todos los derechos reservados. Douglas Suarez Zubieta</footer>
+
+<script>
+const repertorio = {
+    'A': {
+        titulo: 'Bermejeñita (Cueca)',
+        letra: `
+    Dm              Bb
+Del bello jardín chapaco
+          C           F  
+vengo cantando coplas de amor
+    C               F
+//a la tierra del lapacho
+   A7             Dm
+traigo todito tu corazón//
+
+Coplitas para Bermejo
+guitarra bombo también violín
+//Y dejaré una amancaya
+pa que jamás te olvides de mi//
+
+<b>(Quimba)</b>
+Bermejeñita
+florcita de tu río azul
+//Besar tus labios quisiera
+llenos de azucar llenos de miel//`,
+        abc_D:`
+X:1
+T:Bermejeñita
+M:6/8
+L:1/4
+K:Dm
+Q:"Intro"
+| d/>d/B/ d/ B | d/>d/B/ d/ B | d/>d/B/ d/B/A/ | F3/2 z/ d//d//d//e// | f/>f/e/ f/ e | f3/2 z/ d//d//d//e// |
+| f/>f/e/ f/ d | B3/2 d//d//d//e// | f/>f/e/ f/ e | f3/2 z/ d//d//d//e// | f/>f/e/ f/e/d/ | B z ^A | B z ^A | B3/2 z d/ ||
+Q:"Tema"
+| d/>d/c/ A/c/d/- | d/d/c/ B/c/d/- | d/d/e/ d B/ | A3/2 z f | f/>f/e/ d/e/f/- |f/f/e/ d/e/f/- |
+| f/f/a/ f e/ | d3/2 z f/ | f/>f/e/ d/e/f/- | f/f/e/ d/e/f/- | f/f/a/ f e/ |1 d3/2 z d/ ||`
+    },
+
+    'B': {
+        titulo:'Anarracherita',
+        letra:`
+<b>(Quimba)</b>
+F           
+Anarrancherita
+         F   E     D   C
+no me mires con desprecio
+   C         D        C
+//yo no voy por tu plata
+    D        C    E7    Am
+es por tus ojos paloma mia//`,
+        abc_D:`
+X:1
+T:Anarracherita
+M:6/8
+L:1/4
+K:A
+Q:"Intro"
+[Bge]/ z/[Bge]/ [Bge]3/2 | [cea]/ z/ [cea]/ [cea]3/2 | [ceg]/ z/ [ceg]/ [ceg]3/2 | [cfa]/ z/ [cfa]/ [cfa]3/2 | [Bge]/ z/ [Bge]/ [Bge]3/2 | [cea]/ z/ [cea]/ [cea]3/2 |
+[ceg]/ z/ [ceg]/ [ceg]3/2 | [cfa]/ z/ [cfa]/ [cfa]/f/g/ |: a/>a/a/ a/b/b/ |  a/>a/a/ a/b/b/ | a/>a/a/ g/f/e/ |
+|1 f> z/ f/g/ :|2 f> z/ ^e || f3/2 z/ ^e | f3/2 z |
+Q:"Tema"
+|| d/>d/d/ d/d/d/- | d d/ d/d/d/- | d c/ c/ B | A2 A/ B/ | c/>c/c/ c/ B |
+ A c/ c/ B | A A/ A/ G | F2 A/ B/ | c/>c/c/ c/ B | A c/ c/ B | A A/ A/ G | F2 z ||`
+}
+};
+
+
+let cancionActiva = 'A';
+
+function seleccionarCancion(id) {
+    cancionActiva = id;
+    const cancion = repertorio[id];
+    document.getElementById('titulo-cancion').innerText = cancion.titulo;
+    
+    // Renderizar Letra
+    document.getElementById('letra-container').innerHTML = `<pre>${cancion.letra}</pre>`;
+
+    // Renderizar Partitura
+    if (typeof ABCJS !== 'undefined' && cancion.abc_D) {
+        ABCJS.renderAbc('partitura-container', cancion.abc_D, {
+            responsive: 'resize',
+            scale: 0.8, // Ajustado para que quepa en media pantalla
+            paddingbottom: 30
+        });
+    } else {
+        document.getElementById('partitura-container').innerHTML = "<p>Partitura no disponible</p>";
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => seleccionarCancion('A'));
+</script>
+</body>
+</html>
