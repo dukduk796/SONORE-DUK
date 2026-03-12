@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SONORE - Tríptico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesPP.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="encabezado">REPERTORIO SONORE DUK</h1>
+    </header>
+
+    <section class="titulo">
+        <h2 id="titulo-cancion">Seleccione una canción</h2>
+    </section>
+
+    <div class="seleccion-cancion">
+        <button onclick="seleccionarCancion('A')">Cuecas Dm</button>
+        <button onclick="seleccionarCancion('B')">Cuecas Am</button>
+        <button onclick="seleccionarCancion('C')">Cuecas</button>
+        <button onclick="seleccionarCancion('D')">Huayños Dm</button>
+        <button onclick="seleccionarCancion('E')">Huayños Gm-Am</button>
+        <button onclick="seleccionarCancion('F')">Salay</button>
+        <button onclick="seleccionarCancion('G')">Tinkus</button>
+        <button onclick="seleccionarCancion('H')">Morenadas</button>
+        <button onclick="seleccionarCancion('I')">Carnavalitos</button>
+        </div>
+
+    <div class="content-container">
+        <div class="hoja-caja">
+            <div class="etiqueta-hoja"></div>
+            <div id="hoja1-contenido" class="hoja-blanca"></div>
+        </div>
+        
+        <div class="hoja-caja">
+            <div class="etiqueta-hoja"></div>
+            <div id="hoja2-contenido" class="hoja-blanca"></div>
+        </div>
+
+        <div class="hoja-caja">
+            <div class="etiqueta-hoja"></div>
+            <div id="hoja3-contenido" class="hoja-blanca"></div>
+        </div>
+    </div>
+
+    <footer>Todos los derechos reservados. Douglas Suarez Zubieta</footer>
+
+<script>
+const repertorio = {
+    'A': {
+        titulo: 'Cuecas Dm',
+        hoja1: `
+<b>CLAVELES ROJOS</b>
+Dm     A7           Dm 
+¡Aaay! me duele el alma
+C7            F  
+si te vas de mi
+       A7           Dm 
+mi corazón se desangra
+C              F
+cuantas noches he sufrido
+  A7             Dm 
+pensado en tu querer
+
+Tuuu eres mi cielo
+eres la inquietud
+que se adueño de mi vida
+es por eso que te pido
+no me hagas padecer
+
+D7          Gm  C      F  
+Claveles rojos flores divinas
+C7           F  
+perfuman el alma
+           A7        Dm 
+cuando me miran tus ojos
+C              F
+amorcito de mi vida
+A7              Dm
+tuyo es mi corazón
+
+DC#BA#C#B. (gf#edc#bbc#dc#def#) 
+DC#BAF#BAG#F#ED#ED. C#EDBA#C#BA#BAG#F#ED
+
+<b>SAUCE LLORÓN</b>
+  Dm               Bb
+Sauce llorón chukasqani
+       C           F   
+K´umuyquspa waqanaypaq
+   C                  F  
+//Payllachus soltera kasqa
+  A7              Dm
+Mana qonqay atinaypaq//
+
+Q´omer moye khellu sonqo
+Saqhepuyqi tukuysonqo
+//Qhamp´is lari masiqiwan
+Noqataq patronayqiwan//
+
+BBA#BBA#B BBC#D C#C#BF#
+C#C#C#C#BA#BF# F#F#FF#ED#ED
+
+<b>MUYURIRISPA</b>
+  Dm                 C
+Muyuwayrapi muyuririspa
+   C          F   
+riphusaykaymanta
+    C                   F  
+//sichusch´inkasa sichuswañusa
+A7           Dm
+Ni riquankinachu//
+
+imallapaqchus pakayllamanta
+Suana korqancheq
+//ch´ullunkajina lark´akantupi
+waqharikunapaq//
+
+BBC#DB AAABA C#C#C#A#BF#
+AAABA F#F#G#AG# BAF#F#ED
+
+<b>AY SEÑOR PADRINO</b>
+Albarillo sach´a
+Llanthuchikunapaq
+//Imapaq kasaran imapaq kasaran
+Wawa chukunapaq//
+
+Ay señor padrino
+Kan juchayuq kanqi
+//mana munasajta mana munasajta
+Kasarachiwanqi//
+
+F#F#F#F#DB BC#DC#BF#
+F#AAABA F#AAABA BAF#F#ED
+
+<b>AMAPOLA</b>
+  Dm            Bb
+Amapola puca tik´a
+ C         F
+Amañapis tik´awajchu
+    C               F
+//t´ukuy pasaq t´ipisunqu 
+  A7       Dm
+Muskirispa wich´usunqu//
+
+F#F#DC#BBA#B BBBABAG#F#
+BBBABAG#F# DEF#F#BF#ED
+
+<b>PAJARILLO</b>
+ Dm                  Gm
+quien es aquel pajarillo
+Gm        C           F
+Que canta sobre el limón
+      C             F
+Anda dile que no cante
+        A           Dm
+Que me rompe el corazón
+
+Unos quien con el alma
+Y otros con el corazon
+Yo solito te querido
+Alma vida y corazón
+
+BBBBBAGE BBBDBAF#
+DEF#A F#EDB DEF#F#EF#DB
+        `,
+        hoja2: `
+<b>URPI</b>
+Dm             Bb
+urpi ama waqaychu
+       F   G          F    G   F
+Sacha’pis sonqo nanayta palomitay
+     F      G   F
+Jawamuway qhawasayki 
+   G    F    A7    Dm
+Ñawiñaywan señasqayqi
+Urayk’amuy umiskayki 
+Sonqetuywan churaskayki
+
+Pitaj maytaj juchayuj
+Songollaykicha juchayuj palomitay
+Ujta ujta munarispa 
+Orgullosa qochalita
+Urayk’amuy umiskayki 
+Sonqetuyman churasqayqi
+
+Dm
+F#G#ABC#DB BC#DC#BAG#F# ABAF#
+F#G#AAABAF# ABAF# F#F#ED
+Bm 
+D#E#F#G#A#BG# G#A#BA#G#F#E#D# F#G#F#D#
+D#E#F#F#F#G#F#D# F#G#F#D# D#D#C#B
+
+<b>TARABUQUEÑITA</b>
+   Dm                  Bb
+Andas con uno andas con otro
+ C           F
+Ay mi palomitay
+    C               F
+//Por que no andas solo conmigo
+  A7      Dm
+Tarabuqueñita//
+
+F#F#BDB GGBDB AABF#EF#
+AAAAF#EEF#AF# EEEF#C#B
+
+
+<b>FLOR DE NARANJO</b>
+Dm          Bb
+flor de naranjo 
+C             F
+Blanquito florece
+C                F
+Amor de cholita wawitay
+A              Dm
+Siempre permanece
+
+Runtusa apamuy
+Estrellakusunchis
+Oficiuyachaku cholitay
+Kasarakusunchis
+
+DBA#C#B C#C#C#A#BF#
+C#C#C#A#BA F#F#B BAF#F#ED
+
+<b>VERDE ES EL ROMERO</b>
+ Dm                Bb
+Verde es el romero Verde es el romero
+  F            C
+Cuando no florece
+  C                F
+//lindo es el amor lindo es el amor
+  A7          Dm
+Cuando permanece//
+
+Muchas veces dije
+En mi vida senté
+//ojos que no ven ojos que no ven
+Corazón no siente//
+
+<b>PUNATEÑITA QUERIDA</b>
+Dm            Gm
+Punateñita querida 
+ A7                  Dm
+de buen plantar y derecha
+C                  F
+no me prives de la dicha
+    A7             Dm
+de caminar por tu vera 
+
+Si abrazaría tu cintura 
+sería alcanzar la luna 
+si no he de agarrar la tuna 
+verde de las amarguras 
+
+En Punata naciste flor 
+en Punata vas a morir 
+//Waj Karu llaqtaman ripuy 
+  sichus waqayta munanki//
+
+F#F#GAGF#AG A#A#BC#BA#C#B
+BDBDBAF#F# EF#G#AEDED
+        `,
+        hoja3: `
+<b>EN LAS PUERTAS DE UN JARDÍN</b>
+Dm                    A7
+En la puerta de un jardín
+                     Dm
+Triste me puse a llorar
+ A#   F     G       F
+Como si las flores fueran
+ A7               Dm
+Remedio para olvidar
+
+Dm                A7
+Fuiste mi primer amor
+                     Dm
+Tu me enseñaste a querer
+  A#      F   G      F
+No me enseñes a olvidar
+    A7                Dm
+Eso yo no quiero aprender
+
+DC#BBA#BC# C#BA#A#G#A#B
+BBAAG#G#F# DEF#F#EF#DB
+
+<b>SUEGRITAY</b>
+ Dm                Bb
+Suegritay munakullaway
+   C            Dm
+wawayqeq munasqankani 
+       C           F
+//lawatapis ch´aqhetapis
+     A7          Dm
+Mikhukuyta yachallani//
+
+Perqa pata he recorrido
+y tu no me he uyarido
+//y tus alqos me han khanido
+cojor cojor me venido//
+
+F#BDC#BA#C#B BDC#BA#C#F#
+ABC#E BA#BF# A#BC#BF#F#ED
+
+<b>YO TE ABORREZACO</b>
+      Dm  A7
+Yo no se por que tu eres 
+               Dm
+tan mala con migo
+Gm            C        F
+Pero lloraras amargamente
+F
+Cuando me vaya
+A7             Dm
+Cuando me ausente
+
+Y veras que en esta vida
+Todo se paga
+Y el orgullo que siempre has tenido
+Dia tras dia se va acabando
+
+Dm                        A7
+Me habias dicho que te quiero
+A7           Dm
+Yo te aborrezco
+Gm            C           F
+Supaya pachu tuk’uy warmista
+F                A7        Dm
+Dius llama pachu qari wawasta
+
+DEF# EDC#C#DEDC#F#ED
+EGF#GA C#BA#BAF# BAF#F#F# F#ED#ED
+
+<b>TU ORGULLO</b>
+Dm               Gm
+En el vaivén del alma
+         C            F 
+Mi vida hecha tu orgullo
+C                F
+Porque la vida tiene negrita
+A7         Dm 
+Caras opuestas
+
+Un día flor hermosa
+Que me negaste tu corazón
+Ahora flor deshojada llorando 
+Pides que te ame
+
+Dm            A7 
+No se hace tanto
+Bb      C  F 
+Como se paga
+ C            F 
+Nunca digas paloma
+             A7         Dm 
+De esta agua no he de beber
+
+BDF#BA#BAG#AG BAG#BAF#
+F#BDF#E#F#ED#EC# F#ED#ED
+        `
+    },
+    'B': {
+        titulo: 'Cuecas Am',
+        hoja1: `
+<b>CALZÓN DE SEDA</b> 
+Am           F
+Esa cholita dice que tiene
+G            C
+calzón de seda
+         G       C
+//Por saber o saber, 
+E7              Am
+no se que voy hacer//
+
+La miraría mi negrita
+Su piernecita, 
+//hasta que rascando se me diga 
+toma tu suerte//
+
+C#C#BBA AF#F#AF# G#G#ABC#
+//C#C#E BC#A  C#C#BC#AF#//
+
+<b>ATRAPADORITA</b>
+Am               F
+Senoray akjayki canchu
+F           G    C
+Ch’aquí wanchisawan
+C     D        C
+Ama despreciargoaichu
+     E            Am
+Paipuni ch’ipacusawan
+
+Aunque no soy tan celoso
+Pero si nervioso
+Inocente palomita
+No te burles imillita
+
+Chay wawayki nispa tumparisawanki
+Ch’ascañawisitay
+//Manachus yachanqui pi supaychus tatan
+atrapadorita//
+
+AAAG#F#G#AF# AAABF#E 
+C#C#C#BC#BAA C#BAG#ABAF#
+AAABC#BAA C#BAG#ABAF#.
+
+<b>ANARRANCHERITA</b>
+F
+Anarrancherita 
+         F    E      D  C
+No me mires con desprecio
+C          D        C
+Yo no voy por tu plata
+    D        C
+Es por tus ojos 
+E7        Am
+Paloma mía
+
+DDDDDD DDDC#C#BA 
+//ABC#C#C#BA C#C#BA AAG#F#//
+
+<b>CHOLA BANDIDA</b>
+Am    G      C
+Chola bandida 
+G              C
+Donde te has ido 
+  G                  C
+//Con quien te has ido 
+        E              Am
+Que llorando estoy por ti//
+
+C#F#FF#G#AAG#AB C#C#BC#BC#
+BBBBBBBAG#AB C#C#BC#AF#
+        
+        `,
+        hoja2: `
+<b>PUÑAL ENVENENADO</b>
+Am               C 
+Con puñal envenenado
+E7              Am 
+Atravesaste mi pecho
+G7  
+//Ondas huellas has dejado
+C              E7          Am 
+En mi corazón desecho de amor//
+
+Al cielo pido la muerte
+Y el no me la quiere dar
+//Me parece que hasta el cielo
+Se goza y se goza de verme llorar//
+
+Am                    E7
+Dime, dime si me quieres
+                    Am 
+O si voluntad me tienes
+   G7  
+//Donde caben voluntades
+C                E7         Am 
+El amor también, ya puede caber//
+
+F#G#AG#ABC#C# C#BA#BAG#AA 
+DC#BBBA#BG# EDC#C#C#BA#BAG#A
+
+<b>SOLEDAD</b>
+intro: Am G F E7; Dm C E7 Am//
+     E7       Am
+Soledad, Soledad
+                        E7
+esta noche estoy muy triste
+                       Am
+se me ha ocultado la luna
+  Am   G      F      E7
+//y no cabe duda alguna
+                          Am
+que se fue por que te fuiste//
+
+Soledad, Soledad
+en la soledad de mi alma
+llorare mi desventura
+//si el orgullo me dio calma
+que se acabe mi amargura//
+
+Si solo estoy aquí
+sin tu querer mi bien
+//si algún día tu volvieras
+a devolverme la calma//
+
+<b>DESAGARRADO</b>
+ Am      E
+Desgarrado
+            Am
+siento mi pecho
+   G                     C               
+//Por los males y los agravios 
+ E7              Am
+que tu me has hecho //
+
+Am              E7              
+Llorare continuamente 
+           Am
+mi desventura
+G           C        
+Tu gozando mientras 
+         E7           Am
+yo pobre sufro y padezco 
+
+        `,
+        hoja3: `
+<b>UNA PENA TENGO YO</b>
+ Am             E7
+Una pena tengo yo                 
+                  Am
+Y a nadie le importa 
+ G                 C
+Que me importa de nadie 
+      E7              Am
+Si a nadie le importo yo
+
+No quiero humillaciones
+No quiero compasión
+Solo solo he nacido
+Solito voy a morir
+
+<b>CARRITO CARBONERO</b>
+C                    G7
+No creas por que yo canto
+                     C
+Tengo el corazón alegre
+F                     G7
+Yo soy como el pobre cisne 
+                       C
+Que cuando canta se muere
+
+Yo no soy un tren de carga 
+Yo no llevo pasajeros
+Solo la llevo a mi negra 
+En carrito carbonero
+
+<b>PALOMITAY</b>
+ Am     G
+Palomitay,
+       F            C
+mayllatataj purisanki 
+        F             C         
+//Mana chay purisqayqipi 
+    E7               Am
+Sonqetuy wan tinkurqanqi //
+                     
+        F
+Nogataqaq, saqewanqi
+      C           G.         C
+ñak´arispa purinaypaj palomitay
+         F              C
+//Mana chay sonqoyqi nanan 
+       E7          Am
+chicamuna kusgaymanta//
+
+
+        `
+    },
+    'C': {
+        titulo: 'Cuecas',
+        hoja1: `
+        
+        
+        `,
+        hoja2: `
+        
+        `,
+        hoja3: `
+        
+        `
+    },
+
+    'D': {
+        titulo: 'Huayños Dm',
+        hoja1: `
+CUATRO ESTAMOS 
+  Bb                           C         F
+//Cuatro estamos en tu puerta
+                   G             F
+y los cuatro te queremos
+G          F    A     Dm
+ay amorosa palomita (bis)//
+
+  Bb                   C.      F
+//Escógete de los cuatro
+                      G       F
+y los demás nos iremos
+G          F    A     Dm
+ay amorosa palomita//
+
+F           G               F             G           F
+Tu estarás durmiendo en cama caliente
+  Bb                      C.     F
+//y yo pobre desgraciado 
+                       G               F
+dándome diente con diente
+G          F.        A     Dm
+ay amorosa palomita (bis)//
+
+BA#BA#BA#BA  F#G#AABAG#F# A#A#BC#BF#F#ED//
+AABAG#F#  AABAG#F#  BA#BA#BA#BA
+F#G#AABAG#F#  A#A#BC#BF#F#ED//
+
+HOY ESTOY AQUI
+Dm               Bb   C                F 
+Hoy estoy aquí, mañana me voy,
+Bb.              F          A7            Dm 
+pasado mañana dónde ya estaré
+
+Hoy estoy aquí, mañana me voy
+pasado mañana donde ya estaré
+
+ C7                          F 
+Cartitas recibirás, retratos encontrarás,
+Bb.                 F       A7          Dm 
+pero a mi persona nunca la verás
+
+F#F#BA#B DBAF#A DBAF#B AF#F#F#ED//
+C#EEEED#E F#AAAAG#A. DBAF#B AF#F#F#ED//
+
+
+GRACIAS A DIOS
+Dm.            Bb.        C    F
+Gracias a dios soy soltero 
+            G.          F
+Viditay soy soltero
+
+Bb.            F.                  G F
+Que les importa si me alegro
+F.                                    A.      Dm
+Si me emborracho es con mi plata
+
+C.          F.             C.        F
+En esta banda en la otra banda
+C         F.                              A.     Dm
+La alegria es la que manda palomitay
+
+F#F#F#B BBBA AAB G#ABF#
+BAG#A AAABF# AAAG#F#F#ED//
+//F#EF#EE F#EDEE AAAAAG#A BAF#F#ED//
+
+SALE EL SOL
+F.                     Dm.            F
+Sale el sol siguen chupando
+Bb                           C.        F
+Sale la luna siguen tomando
+F                       Dm.         F
+Que será de estos borrachos
+F                      C       A      Dm
+Tan queridos y abandonados
+
+Dm.             F
+Si si negrita linda
+C.                       F
+Si si tu eres mi amor
+Dm.                       F
+Contigo me van celando 
+C                A.  Dm
+Contigo me casaré
+
+F#AA ABF#ED F#BBB BBDBAF#
+AAA ABF#ED BF#F#F# EEEDB//
+// F#F# F#F#EF#F#  EEDDBD
+F#F#F# F#F#EF#F# EEEDDDB//
+
+BASTA CORAZÓN
+Dm                          A#
+//Basta corazón no llores
+                                  F 
+tu vida no tiene remedio,
+                                       A  Dm 
+tu vida no tiene perdón, corazón.//
+
+A#                                     F         A#
+//En vano me vas cautivando, corazón
+                                     F      A  Dm 
+ingrata teniendo tu dueño, corazón.//
+
+
+//Me han dicho que aun me sientes                                 
+aunque lo sientas no me importa
+Aunque me olvides no me importa corazón.//
+
+//Si el destino no ha querido, corazón
+que yo a ti te pertenezca, corazón.//
+
+
+//Me pides volver no puedo                           
+no ´puedo por que no te quiero
+no quiero por que me engañaste, corazón.//
+
+//Seré pobre pero sincero, corazón
+Serás bonita pero ingrata, corazón//.
+
+DEF#EF# DED DDBBAF#BBA AAF#F#EDEF#D DBB
+F#BBBABBA BBD BBAF#F#EF#D DBB//
+
+ESTOY LLORANDO
+//Estoy llorando amargamente
+Por una chica que no me quiere//
+
+//Te quiero dice, te adoro dice
+Pero más tarde, adiós me dice//
+
+DDDEB DDDEB AAABF# AF#EDB
+F#F#F#ED AAABF#  F#AABF# F#EDDB
+
+        
+        `,
+        hoja2: `
+CARIPUYO TORRECITA
+ Bb.                             F
+Delincuente soy, señores,
+Bb.                           F
+Prisionero he de morir.
+F.                             C.      F
+Nada más que por quererte
+F.                     A.             Dm
+Mi sentencia he de cumplir.
+
+F.                              C.      F
+Kawsaptiqam kawsallaytaq,
+Bb.                             F
+Wañuptiywa ñupullaytaq,
+Bb.    F.         C.            F
+Pipis maypis munasuptin
+F.                     A.       Dm
+Sunqun kutichipullaytaq.
+
+Caripuyo torrecita,
+Colcha mayu qhawarispa
+Warmita munana kasqa
+Sonqonchikta tapurispa.
+
+DC#BBBBBDA DC#BBBBDA
+ABAF# F#F#ED DDEF# F#EDB//
+F#F#F#F#F#ED DC#BBBC#DA BAF#F#F#F#ED DDEF#F#EDB//
+
+HE VENIDO NO HE VENIDO
+A#
+Esta calle voy pasando 
+                   C               F
+He venido, no he venido 
+Escribiendo las paredes 
+                           A.    Dm
+Solo por verte he venido 
+
+Solo por verte llorando
+He venido no he venido 
+Hasta mi poncho he perdido 
+Solo por verte he venido 
+
+A#.            C.           F
+He venido no he venido 
+A#.            C.            F
+He venido no he venido 
+Hasta mi poncho he perdido 
+                       A.       Dm
+Solo por verte he venido / /
+
+BC#DBBABF# BC#D DEDBA
+F#F#EDDEF#A BAF#F#EEDB
+
+BC#D DEDBA BC#D DEDBA
+F#F#EDDEF#A BAF#F#EEDB
+
+QUE LE VOY HACER A ESA MUJER
+//Que le voy hacer a esa mujer
+Que le voy hacer 
+la voy a matar la voy a matar//
+
+//Puesto que en el mundo
+Hay otra mejor 
+Puesto que en el mundo 
+Saben amar//
+
+BA#BA#B A#BC#DB
+BA#BA#B C#DBAF# EDDEF#
+AG#F#G#A AAG#BA
+AG#F#G#A ABF#ED
+
+CIERREN LA PUERTA
+F
+Cierren la puerta Échenle llave
+                                A7.       Dm
+Que de esta fiesta nadie se va //
+
+  G.        F.       G.             F
+Salud amigos copas en mano
+  G.             F.         A7            Dm
+Brindemos juntos por la amistad //
+
+A#.                C             F
+Arriba arriba, abajo abajo
+G.                     F
+al centro al centro, salud
+  A7.            Dm
+y luego adentro ------------//
+
+C.                             F
+saca saca saca saca tu
+A7.                              Dm
+tuma tuma tuma tuma tu//
+
+C.                F
+Toma toma toma no más
+C.                F
+Toma toma toma no más
+G.               F 
+Toma toma toma no más 
+A7                     Dm
+Que viva la fiesta
+
+F#BBBA#B F#AAAABF# 
+F#AAAG#BF#F#A F#EDC#B
+
+PATITO DE LA LAGUNA
+Ay patito patito
+Patito de la laguna
+Tu no más tienes la culpa
+Para mi perdición
+
+Imaq paqchus niwarqanqi
+Muna kuyqinispa
+Kunan Tajina waqaspa
+Saque naway qipaq
+
+No puedo olvidar linda cholita
+Tus besos y tus caricias negrita
+Tengo que llorar linda cholita
+Recordando tus palabras negrita
+
+F#F#F#F# F#EF#   F#BAF#F#F#EA
+EEEDDDBA   F#F#EF#DB
+BC#DEF#F# BAF#EA
+ABF#F#F#EA EDB
+
+ME HE RESIGNADO
+ F                                       F
+//Me he resignado a olvidarte
+ Bb                                    Bb
+Me he resignado a perderte
+Bb                                C             F
+Porque nuestro amor es imposible
+                      A7               Dm 
+Es mejor que todo se acabe//
+
+Bb           F        Bb          C   F
+De nada vale haberte amado
+                                    A7   Dm
+Si nunca supiste comprenderme
+Bb        F       Bb          C   F
+Ahora solo queda un camino
+                                      A7          Dm
+Que los dos quedemos como amigos
+
+Recuerda que yo te quise 
+Recuerdo que yo te he amado
+Pero tu en cambio no comprendiste
+Hiciste mi vida imposible 
+
+Yo no te culpo ni te maldigo
+De lo contrario que seas feliz 
+A Dios le pido tu buena suerte 
+Ya que con migo no la tuviste
+
+Sin maldecir ni guardar rencores
+A Dios le pido tu buena suerte
+Sigue tu rumbo por dio de tu quieras 
+Entre tu y yo todo a terminado
+
+DDEF#F#F#EF# F#F#ABBBAB
+DDDBBAAABF# AAAF#F#EDDB
+
+BDDBB BAABF# F#AAF#F#F#EDBD
+BDDBBBAABF# F#AAF#F#F#EDDB
+
+F#F#EF#BBBABAF# F#F#EF#F#EDDBD
+F#F#EF#BBBABAF# F#F#EF#F#EDDBB
+
+
+        `,
+        hoja3: `
+ ORGULLOSA POCOATEÑA
+//Orgullosa linda Pocoateña
+Tu eres culpable de mi sufrimiento//
+//Después del gusto y puesta la dicha
+Sin motivo me has abandonado//
+
+//Yo no quiero cintita y rosada
+De una chica triste y amargada//
+//si la he querido si la he adorado
+Solamente por enamorado//
+
+BC#DBBC#DBAF# F#AAAF#EF#F#EDB
+F#F#EDB BBBBAF#  F#AAF#EF#F#EDB
+
+DONATA
+//Donata bonita traidorita
+Donde estas que haces palomita
+Tanto tiempo te busco llorando
+Ay que mala suerte
+Ay porque me has abandonado//
+
+//Qawaychaj imachay qullanitaq
+Ripuytapis qonqa pullanitaq
+Maylla pitaj qansianqui Donata
+Ay imanasajtaj
+Cholita caripuyeñita//
+
+AAB AAB F#F#ED
+BBD AAB F#F#EF#
+AAB AAB F#ED
+AABAF#D
+F#F#A EEF#EDB
+
+CANTO BAILO ME DIVIERTO
+Canto bailo y me divierto
+Como para que me muera
+Tan cortita esta vida
+Esta vida traicionera
+
+//Llakuchu waqaini karqa 
+Rumichu sonqoyqi karqa
+Mana munayqichu nispa
+Saqe puna wayqi karqa//
+
+F#EDDEEED F#AF#ABBBA
+F#EDDEEED F#EDDEEDB
+
+MARIPOSITA
+//Mariposita, mariposita
+Quién te ha dicho que soy casado//
+//Soy casado por esta noche
+Soy soltero toda la vida//
+
+//Yuyariquspa waqarikuni
+Mamay tatay wañupusqanta//
+//mamay tatay wañupusqanta
+Jallp´a sonqoman tukusqanta// 
+
+F#F#F#BB BBBAF#
+AF#F#F#EEEDB
+
+AF#F#F#EEEAF#
+AF#F#F#EEEDB
+
+CERVECITA BLANCA
+
+Cervecita blanca que me haz embrujado
+Me esta subiendo a mi cabeza
+Cuando estoy borracho que celos que tengo
+Hasta de mi sombra yo te estoy celando
+
+Kay paña makeyqa
+Jarra aysarisqa
+Kay llok´e makeyqa
+Tutuma okharisqa
+Kay kantinapi
+Qhanta reqserqayqu
+Ay amorcito ama neqawaychu
+
+AAAABA AAF#F#ED  DDDED  BAABF#
+F#AAABA AAF#F#ED. AAAABA F#F#EEDB
+
+VILEY VILEÑO
+
+
+BB BBBBAF# DBBBBBAF#
+F#F#EDD AF#D. AF#GDD EEDB
+
+EL AMOR SE PESA
+
+TACACOMEÑA
+
+PUÑAL EN EL PECHO
+
+        `
+    },
+
+    'E': {
+        titulo: 'Huayños Gm-Am',
+        hoja1: `
+<b>TU ABANDONO</b>
+  Gm                              D# 
+//Me dices que te vas Pues anda vete
+                    F7.            Bb   
+Ya no vuelvas a cruzarte en mi camino//
+
+                         D#       C  Bb 
+Te quise con gran pasión yo no lo niego
+                                 C  Bb
+Tu fuiste mi adoración mi único anhelo
+                        D#       C   Bb 
+Hoy que te alejas de mi será muy triste
+                                D7 Gm  
+Mas tarde como olvidar muestro cariño
+
+//Cuando te conocí me prometiste
+Juraste quererme siempre eternamente//
+
+No comprendo la razón de tu abandono
+Puesto a que nunca te di ningún motivo
+Será talvez por causa de mi pobreza
+Si es así vete no más busca riquezas
+
+No quiero que te cruces en mi camino
+Porque nunca fuiste fiel con mi cariño
+Yo buscare otra mejor que te comprenda 
+Que sepa querer y amar sin condiciones.
+
+//GGGGGB BBAAE. DEEEEEA GEEDEB//
+BDDDDDE EEDEB. GBBBBAB BAGEG
+BDDDDDE EEDEB. GBBBBAB BAAGE
+
+GBBBBAB BBBDB. GBBBBAB BAGEG 
+GBBBBAB BBBEB. GBBBBAB BAAGE
+
+<b>PALOMA DEL ALMA MÍA</b>
+  Bb                     F
+//No habia podido olvidarte
+Cm                Gm
+paloma del alma mia//
+//crei ser tu amor perdido
+cuando no estabas conmigo//
+
+        F                        Gm 
+   Viditaaaay, paloma del alma mia,
+        F                        Gm 
+   Viditaaaay, paloma del alma mia,
+
+//Hace poco prometiste
+que nunca me olvidarias//
+//que tus ojos, tu sonrisa
+solo yo disfrutaria//
+
+   //Viditaaaay, paloma del alma mia//
+
+//Haciendo caso a tus promesas
+se disipaban mis tristezas//
+//hoy solo vivo del recuerdo
+de aquellos bellos momentos//
+
+   Viditaaaay, paloma del alma mia 
+
+EBBBDDEA F#AAAGGF#E //
+EGGGGABA AAAAABCB 
+BBBBBDEA  AAAGGF#F#E 
+//EEBA F#AAAGGF#E//
+
+
+<b>CLAVELITO</b>
+  Bb
+//Clavelito clavelito
+  F                           D# A#
+me he de ir por el camino mas triste 
+           D7   Gm
+ya no me has de ver//
+
+A#           D#             A#
+ Me he de ir ya no he de volver 
+A#              F      A#
+y en la puerta de tu casa 
+         D7     Gm
+ya no me has de ver// 
+
+Chunkachus ñawisnin Kanma
+Me de ir
+Chunkantin manta waqayman
+Ya no me haz de ver
+
+Me de ir 
+Ya no he de volver
+En la puerta de tu casa
+Ya no haz de ver
+
+GBBBBAG C#D#E GBBBBBAG F#GAF#E 
+BAG EEEDB GBBBBBAG F#GAF#E 
+
+        `,
+        hoja2: `
+PUTUKUN
+
+QUIEN TE HA DICHO
+
+
+SUEGRA BANDIDA
+//Bajo la rama de un cerro lejano
+Tuve una novia de nombre Fulana
+Era bonita era pretenciosa
+Ni en la tumba yo podré olvidarla//
+
+//Chay vieja maman casado niwaska
+Supay apachu chay mala lenguata
+Yo soy soltero iskay wawasniyuj
+Si es que caso a de ser con su hija//
+
+
+DE LA LAGUNITA
+//De la lagunita sale la Lunita
+Para mi no falta otra palomita//
+//Esos tus ojos esa tu mirada
+Tienen la culpa para mi perdición//
+
+
+AMOROSA PALOMITA
+//zambitay color canela//
+Ojitos de piligrana
+Ay amorosa palomita
+
+//Prima hermana va en la luna//
+Lucero de la mañana
+Ay amorosa palomita
+
+//Amorosa palomita
+Amorosa palomita
+Quien del barrio tan bonita
+Ay para mi compañerita//
+
+EL BORRACHITO
+//El día lunes me había tomado Carraspa
+Hasta las patas me había tomado//
+
+//Cerveza diciendo Chichita diciendo
+Agua de chuño me había tomado//
+
+//El día martes me había tomado Caraspa
+Hasta la patas me había tomado//
+
+//La puerta diciendo Pelota diciendo
+Hasta mi suegra la había pateado//
+
+//El día viernes me había tomado Caraspa
+Hasta la patas me había tomado//
+
+//Soltera diciendo Viudita diciendo
+A una casada me había llevado//
+
+COLQUECHACAMANTA
+//Desde lejos he venido
+Solamente por quererte palomita
+
+//Solamente por quererte
+Solamente por amarte palomita//
+
+//Colquechacamanta
+Cerró potosino 
+cerca llañacasqa
+capital Sucreman//
+
+YOTALEÑA
+
+        `,
+        hoja3: `
+Pensiones
+   G
+//Sabes que te quiero sabes que te amo
+ D
+Con todita el alma robar corazones
+                       F#7
+Después del gusto
+                          Bm
+Te paso pensiones//
+
+//Durazno tikita flor tani tani
+vidayki seguro piwanpis kasaray
+Después del gusto 
+Te paso pensiones//
+
+
+//La china la china cristal bola china
+Kay chucha imilla chica vale china
+Después del gusto
+Te paso pensiones//
+
+//kaytachu pasarqa jabón karqasniyuq
+Kakacha killapi nailon medias niyuq
+Después del gusto
+Te paso pensiones//
+
+
+//Negrita adorada sabes que te quiero
+Con todita el alma robar corazones
+Después del gusto
+Te paso pensiones//
+
+//Estudiante kaspa imata qoyqiman
+Cuadernuy patapi hebergokuykiman
+Después del gusto
+Te paso pensiones//        
+
+
+        `
+    }
+
+};
+
+function seleccionarCancion(id) {
+    const cancion = repertorio[id];
+    if(!cancion) return;
+
+    document.getElementById('titulo-cancion').innerText = cancion.titulo;
+    
+    // Carga las 3 columnas
+    document.getElementById('hoja1-contenido').innerHTML = `<pre>${cancion.hoja1 || ''}</pre>`;
+    document.getElementById('hoja2-contenido').innerHTML = `<pre>${cancion.hoja2 || ''}</pre>`;
+    document.getElementById('hoja3-contenido').innerHTML = `<pre>${cancion.hoja3 || ''}</pre>`;
+}
+
+document.addEventListener('DOMContentLoaded', () => seleccionarCancion('A'));
+</script>
+</body>
+</html>

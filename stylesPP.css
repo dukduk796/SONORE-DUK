@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(168, 157, 98);
+    font-family: sans-serif;
+}
+
+/* Encabezado */
+.titulo {
+    background: rgb(102, 102, 184);
+    color: white;
+    text-align: center; 
+    padding: 8px;
+    margin: 10px auto;
+    width: 98%;
+    border-radius: 8px;
+}
+
+/* CONTENEDOR TRÍPTICO */
+.content-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; /* Mantiene las 3 columnas en una fila */
+    gap: 8px;         /* Espacio mínimo entre páginas */
+    width: 99%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hoja-caja {
+    flex: 1; /* Divide el espacio en 3 partes iguales */
+    display: flex;
+    flex-direction: column;
+}
+
+.etiqueta-hoja {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    font-size: 11px;
+    padding: 3px;
+    border-radius: 5px 5px 0 0;
+}
+
+.hoja-blanca {
+    background-color: #fdfdfd;
+    border: 1px solid #bbb;
+    border-top: none;
+    padding: 5px;      /* Espacio interno reducido */
+    min-height: 500px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* TEXTO DE CANCIONES (REDUCIDO) */
+pre {
+    white-space: pre-wrap;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;   /* Tamaño más pequeño para que quepa en 3 columnas */
+    line-height: 1.0;  /* Espaciado mínimo */
+    color: #333;
+}
+
+/* Ajuste para pantallas pequeñas (Celulares) */
+@media (max-width: 768px) {
+    pre {
+        font-size: 10px; /* Muy pequeño en móvil para no romper el tríptico */
+        line-height: 0.9;
+    }
+    .content-container {
+        gap: 3px;
+    }
+}

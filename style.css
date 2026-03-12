@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(168, 157, 98);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.encabezado {
+    text-align: center;
+    padding: 15px;
+}
+
+.titulo {
+    background: rgb(102, 102, 184);
+    padding: 10px;
+    color: white;
+    text-align: center; 
+    margin: 10px auto;
+    width: 95%;
+    border-radius: 10px;
+}
+
+.nav {
+    background-color: rgb(39, 39, 36);
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.nav a {
+    background-color: rgb(166, 173, 87);
+    color: black;
+    text-decoration: none;
+    padding: 6px 12px;
+    margin: 4px;
+    border-radius: 15px;
+    font-size: 14px;
+}
+
+.seleccion-cancion {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.seleccion-cancion button {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+/* CONTENEDOR DUAL */
+.content-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; /* Mantiene las dos hojas juntas */
+    gap: 15px;
+    width: 98%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.hoja-caja {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.etiqueta-hoja {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 10px 10px 0 0;
+    font-size: 14px;
+}
+
+/* Contenedor de la hoja - Reducimos el padding para ganar espacio */
+.hoja-blanca {
+    background-color: #fdfdfd;
+    border: 2px solid #bbb;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    padding: 8px; /* Antes era 15px, ahora es más compacto */
+    min-height: 600px;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Texto de las canciones (Letras y Acordes) */
+pre {
+    white-space: pre-wrap;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px; /* Bajamos de 16px a 14px */
+    line-height: 0.8; /* Bajamos de 1.5 a 1.2 (espaciado más pegado) */
+    color: #333;
+    margin: 0;
+}
+
+/* Ajuste para pantallas pequeñas (Celulares) */
+@media (max-width: 768px) {
+    pre {
+        font-size: 11px; /* Letra más pequeña en móvil para que no se corte */
+        line-height: 1.1; /* Espaciado mínimo en móvil */
+    }
+    .hoja-blanca {
+        padding: 5px;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SONORE - Cancionero Dual</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="encabezado">REPERTORIO SONORE BOLIVIA</h1>
+    </header>
+
+    <nav class="nav">
+        <ul> 
+            <li><a href="index.html" class="botonI"><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="Chuntunquis.html">Chuntunquis</a></li>
+            <li><a href="Cuecas.html">Cuecas</a></li>
+            <li><a href="Huayños.html">Huayños</a></li>
+            <li><a href="Tinkus.html">Tinkus</a></li>
+            <li><a href="Morenadas.html">Morenada</a></li>
+        </ul>
+    </nav>
+
+    <section class="titulo">
+        <h2 id="titulo-cancion">Seleccione una canción</h2>
+    </section>
+
+    <div class="seleccion-cancion">
+        <button onclick="seleccionarCancion('A')">Cuecas Dm</button>
+        <button onclick="seleccionarCancion('B')">Cuecas Am</button>
+        <button onclick="seleccionarCancion('C')">Cuecas</button>
+        <button onclick="seleccionarCancion('D')">Huayños Dm</button>
+        <button onclick="seleccionarCancion('E')">Huayños Am</button>
+        <button onclick="seleccionarCancion('F')">Zapateos</button>
+        <button onclick="seleccionarCancion('G')">Tinkus</button>
+        <button onclick="seleccionarCancion('G')">Morenadas</button>
+    </div>
+
+    <div class="content-container">
+        <div class="hoja-caja">
+            <div class="etiqueta-hoja"></div>
+            <div id="hoja1-contenido" class="hoja-blanca"></div>
+        </div>
+        
+        <div class="hoja-caja">
+            <div class="etiqueta-hoja"></div>
+            <div id="hoja2-contenido" class="hoja-blanca"></div>
+        </div>
+    </div>
+
+    <footer>Todos los derechos reservados. Douglas Suarez Zubieta</footer>
+
+<script>
+const repertorio = {
+    'A': {
+        titulo: 'Cuecas Dm',
+        hoja1: `
+<b>(CLAVELES ROJOS)</b>
+Dm     A7           Dm 
+¡Aaay! me duele el alma
+C7            F  
+si te vas de mi
+       A7           Dm 
+mi corazón se desangra
+C              F
+cuantas noches he sufrido
+  A7             Dm 
+pensado en tu querer
+
+Tuuu eres mi cielo
+eres la inquietud
+que se adueño de mi vida
+es por eso que te pido
+no me hagas padecer
+
+D7          Gm  C      F  
+Claveles rojos flores divinas
+C7           F  
+perfuman el alma
+           A7        Dm 
+cuando me miran tus ojos
+C              F
+amorcito de mi vida
+A7              Dm
+tuyo es mi corazón
+
+DC#BA#C#B. (gf#edc#bbc#dc#def#) 
+DC#BAF#BAG#F#ED#ED. C#EDBA#C#BA#BAG#F#ED
+
+<b>(SAUCE LLORÓN)</b>
+  Dm               Bb
+Sauce llorón chukasqani
+       C           F   
+K´umuyquspa waqanaypaq
+   C                  F  
+//Payllachus soltera kasqa
+  A7              Dm
+Mana qonqay atinaypaq//
+
+Q´omer moye khellu sonqo
+Saqhepuyqi tukuysonqo
+//Qhamp´is lari masiqiwan
+Noqataq patronayqiwan//
+
+BBA#BBA#B BBC#D C#C#BF#
+C#C#C#C#BA#BF# F#F#FF#ED#ED
+
+<b>(MUYURIRISPA)</b>
+  Dm                 C
+Muyuwayrapi muyuririspa
+   C          F   
+riphusaykaymanta
+    C                   F  
+//sichusch´inkasa sichuswañusa
+A7           Dm
+Ni riquankinachu//
+
+imallapaqchus pakayllamanta
+Suana korqancheq
+//ch´ullunkajina lark´akantupi
+waqharikunapaq//
+
+BBC#DB AAABA C#C#C#A#BF#
+AAABA F#F#G#AG# BAF#F#ED
+
+<b>(AY SEÑOR PADRINO)</b>
+Albarillo sach´a
+Llanthuchikunapaq
+//Imapaq kasaran imapaq kasaran
+Wawa chukunapaq//
+
+Ay señor padrino
+Kan juchayuq kanqi
+//mana munasajta mana munasajta
+Kasarachiwanqi//
+
+F#F#F#F#DB BC#DC#BF#
+F#AAABA F#AAABA BAF#F#ED
+
+<b>(AMAPOLA)</b>
+  Dm            Bb
+Amapola puca tik´a
+ C         F
+Amañapis tik´awajchu
+    C               F
+//t´ukuy pasaq t´ipisunqu 
+  A7       Dm
+Muskirispa wich´usunqu//
+
+F#F#DC#BBA#B BBBABAG#F#
+BBBABAG#F# DEF#F#BF#ED
+
+<b>(PAJARILLO)</b>
+ Dm                  Gm
+quien es aquel pajarillo
+Gm        C           F
+Que canta sobre el limón
+      C             F
+Anda dile que no cante
+        A           Dm
+Que me rompe el corazón
+
+Unos quien con el alma
+Y otros con el corazon
+Yo solito te querido
+Alma vida y corazón
+
+BBBBBAGE BBBDBAF#
+DEF#A F#EDB DEF#F#EF#DB
+
+<b>(URPI)</b>
+Dm             Bb
+urpi ama waqaychu
+       F   G          F    G   F
+Sacha’pis sonqo nanayta palomitay
+     F      G   F
+Jawamuway qhawasayki 
+   G    F    A7    Dm
+Ñawiñaywan señasqayqi
+Urayk’amuy umiskayki 
+Sonqetuywan churaskayki
+
+Pitaj maytaj juchayuj
+Songollaykicha juchayuj palomitay
+Ujta ujta munarispa 
+Orgullosa qochalita
+Urayk’amuy umiskayki 
+Sonqetuyman churasqayqi
+
+Dm
+F#G#ABC#DB BC#DC#BAG#F# ABAF#
+F#G#AAABAF# ABAF# F#F#ED
+Bm 
+D#E#F#G#A#BG# G#A#BA#G#F#E#D# F#G#F#D#
+D#E#F#F#F#G#F#D# F#G#F#D# D#D#C#B
+
+<b>(TARABUQUEÑITA)</b>
+   Dm                  Bb
+Andas con uno andas con otro
+ C           F
+Ay mi palomitay
+    C               F
+//Por que no andas solo conmigo
+  A7      Dm
+Tarabuqueñita//
+
+F#F#BDB GGBDB AABF#EF#
+AAAAF#EEF#AF# EEEF#C#B
+
+        `,
+        hoja2: `
+<b>(FLOR DE NARANJO)</b>
+Dm          Bb
+flor de naranjo 
+C             F
+Blanquito florece
+C                F
+Amor de cholita wawitay
+A              Dm
+Siempre permanece
+
+Runtusa apamuy
+Estrellakusunchis
+Oficiuyachaku cholitay
+Kasarakusunchis
+
+DBA#C#B C#C#C#A#BF#
+C#C#C#A#BA F#F#B BAF#F#ED
+
+<b>(VERDE ES EL ROMERO)</b>
+ Dm                Bb
+Verde es el romero Verde es el romero
+  F            C
+Cuando no florece
+  C                F
+//lindo es el amor lindo es el amor
+  A7          Dm
+Cuando permanece//
+
+Muchas veces dije
+En mi vida senté
+//ojos que no ven ojos que no ven
+Corazón no siente//
+
+<b>(PUNATEÑITA QUERIDA)</b>
+Dm            Gm
+Punateñita querida 
+ A7                  Dm
+de buen plantar y derecha
+C                  F
+no me prives de la dicha
+    A7             Dm
+de caminar por tu vera 
+
+Si abrazaría tu cintura 
+sería alcanzar la luna 
+si no he de agarrar la tuna 
+verde de las amarguras 
+
+En Punata naciste flor 
+en Punata vas a morir 
+//Waj Karu llaqtaman ripuy 
+  sichus waqayta munanki//
+
+F#F#GAGF#AG A#A#BC#BA#C#B
+BDBDBAF#F# EF#G#AEDED
+
+<b>(EN LAS PUERTAS DE UN JARDÍN)</b>
+Dm                    A7
+En la puerta de un jardín
+                     Dm
+Triste me puse a llorar
+ A#   F     G       F
+Como si las flores fueran
+ A7               Dm
+Remedio para olvidar
+
+Dm                A7
+Fuiste mi primer amor
+                     Dm
+Tu me enseñaste a querer
+  A#      F   G      F
+No me enseñes a olvidar
+    A7                Dm
+Eso yo no quiero aprender
+
+DC#BBA#BC# C#BA#A#G#A#B
+BBAAG#G#F# DEF#F#EF#DB
+
+<b>(SUEGRITAY)</b>
+ Dm                Bb
+Suegritay munakullaway
+   C            Dm
+wawayqeq munasqankani 
+       C           F
+//lawatapis ch´aqhetapis
+     A7          Dm
+Mikhukuyta yachallani//
+
+Perqa pata he recorrido
+y tu no me he uyarido
+//y tus alqos me han khanido
+cojor cojor me venido//
+
+F#BDC#BA#C#B BDC#BA#C#F#
+ABC#E BA#BF# A#BC#BF#F#ED
+
+<b>(YO TE ABORREZACO)</b>
+      Dm  A7
+Yo no se por que tu eres 
+               Dm
+tan mala con migo
+Gm            C        F
+Pero lloraras amargamente
+F
+Cuando me vaya
+A7             Dm
+Cuando me ausente
+
+Y veras que en esta vida
+Todo se paga
+Y el orgullo que siempre has tenido
+Dia tras dia se va acabando
+
+Dm                        A7
+Me habias dicho que te quiero
+A7           Dm
+Yo te aborrezco
+Gm            C           F
+Supaya pachu tuk’uy warmista
+F                A7        Dm
+Dius llama pachu qari wawasta
+
+DEF# EDC#C#DEDC#F#ED
+EGF#GA C#BA#BAF# BAF#F#F# F#ED#ED
+
+<b>(TU ORGULLO)</b>
+Dm               Gm
+En el vaivén del alma
+         C            F 
+Mi vida hecha tu orgullo
+C                F
+Porque la vida tiene negrita
+A7         Dm 
+Caras opuestas
+
+Un día flor hermosa
+Que me negaste tu corazón
+Ahora flor deshojada llorando 
+Pides que te ame
+
+Dm            A7 
+No se hace tanto
+Bb      C  F 
+Como se paga
+ C            F 
+Nunca digas paloma
+             A7         Dm 
+De esta agua no he de beber
+
+BDF#BA#BAG#AG BAG#BAF#
+F#BDF#E#F#ED#EC# F#ED#ED
+        
+        `},
+
+
+    'B': {
+        titulo: 'Huayños',
+        hoja1: `Aquí puedes llenar toda la HOJA 1..
+(Versos iniciales, acordes de intro)`,
+        hoja2: `Aquí puedes llenar toda la HOJA 2...
+(Quimba, Coros o Punteos)`
+    },
+    // Agrega aquí de la C a la Q siguiendo el mismo formato
+};
+
+function seleccionarCancion(id) {
+    const cancion = repertorio[id];
+    if(!cancion) return;
+
+    document.getElementById('titulo-cancion').innerText = cancion.titulo;
+    
+    // Llenado de hojas por separado
+    document.getElementById('hoja1-contenido').innerHTML = `<pre>${cancion.hoja1 || ''}</pre>`;
+    document.getElementById('hoja2-contenido').innerHTML = `<pre>${cancion.hoja2 || ''}</pre>`;
+}
+
+document.addEventListener('DOMContentLoaded', () => seleccionarCancion('A'));
+</script>
+</body>
+</html>
